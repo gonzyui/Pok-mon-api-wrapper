@@ -1,11 +1,12 @@
 {
   "name": "pokemon-api-wrapper",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.1.0",
+  "main": "PokemonAPIWrapper.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": ["pokemon", "api", "wrapper", "pokeapi"],
+  "repository": "https://github.com/gonzyui/Pok-mon-api-wrapper",
   "author": "gonzyui",
   "license": "MIT",
   "description": "A simple wrapper for the PokeAPI",

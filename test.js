@@ -1,27 +1,32 @@
-const PokemonAPI = require('./index');
+const PokemonAPIWrapper = require('./PokemonAPIWrapper');
+const wrapper = new PokemonAPIWrapper();
 
-const api = new PokemonAPI();
+// Utilisation des nouvelles fonctions
+async function testPokemonAPI() {
+    const pokemonName = 'pikachu';
 
-(async () => {
     try {
-        const pikachu = await api.getPokemon('pikachu');
-        console.log('Pikachu data:', pikachu);
+        const type = await wrapper.getType(pokemonName);
+        console.log('Types :', type);
 
-        const staticAbility = await api.getAbility('static');
-        console.log('Static ability:', staticAbility);
+        const abilities = await wrapper.getAbilities(pokemonName);
+        console.log('Capacités :', abilities);
 
-        const randomPokemon = await api.getRandomPokemon();
-        console.log('Random Pokémon:', randomPokemon.name);
+        const hiddenAbilities = await wrapper.getHiddenAbilities(pokemonName);
+        console.log('Capacités cachées :', hiddenAbilities);
 
-        const fireTypePokemons = await api.getPokemonByType('fire');
-        console.log('Fire-type Pokémon:', fireTypePokemons);
+        const stats = await wrapper.getStats(pokemonName);
+        console.log('Statistiques :', stats);
 
-        const pikachuEvolution = await api.getEvolutionChain('pikachu');
-        console.log('Pikachu Evolution Chain:', pikachuEvolution);
+        const image = await wrapper.getImage(pokemonName);
+        console.log('Image :', image);
 
-        const berries = await api.getBerries();
-        console.log('Available berries:', berries);
+        const questionData = await wrapper.getQuestion('pikachu');
+        console.log('Question :', questionData.question);
+        console.log('Réponse correcte :', questionData.correctAnswer);
     } catch (error) {
-        console.error(error.message);
+        console.error('Erreur :', error);
     }
-})();
+}
+
+testPokemonAPI();
