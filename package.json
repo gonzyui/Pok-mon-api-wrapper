@@ -5,6 +5,7 @@
   "main": "dist/PokemonAPI.js",
   "author": "gonzyui",
   "repository": "https://github.com/gonzyui/Pokemon-api-wrapper",
+  "keywords": ["pokemon", "poke-api", "pokemonapi", "pokemon-api", "pokeapi"],
   "scripts": {
     "build": "tsc",
     "start": "node dist/PokemonAPI.js",

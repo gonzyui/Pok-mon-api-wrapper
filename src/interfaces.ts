@@ -6,7 +6,6 @@ export interface Pokemon {
     weight: number;
     abilities: Array<{ ability: { name: string } }>;
     species: { name: string };
-    // Ajouter d'autres propriétés selon les données spécifiques
 }
 
 export interface Ability {
@@ -15,18 +14,15 @@ export interface Ability {
         effect: string;
         short_effect: string;
     }>;
-    // Autres propriétés spécifiques à l'ability
 }
 
 export interface Species {
     name: string;
     evolution_chain: { url: string };
-    // Autres propriétés spécifiques à la species
 }
 
 export interface Type {
     pokemon: Array<{ pokemon: { name: string } }>;
-    // Autres propriétés spécifiques au type
 }
 
 export interface EvolutionChain {
@@ -34,10 +30,8 @@ export interface EvolutionChain {
         species: { name: string };
         evolves_to: EvolutionChain[];
     };
-    // Autres propriétés spécifiques à l'évolution
 }
 
 export interface Berry {
     name: string;
-    // Autres propriétés spécifiques à la berry
 }
