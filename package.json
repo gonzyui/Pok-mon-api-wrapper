@@ -1,16 +1,25 @@
 {
   "name": "pokemon-api-wrapper",
-  "version": "1.1.0",
-  "main": "PokemonAPIWrapper.js",
-  "scripts": {
-    "test": "node test.js"
-  },
-  "keywords": ["pokemon", "api", "wrapper", "pokeapi"],
-  "repository": "https://github.com/gonzyui/Pok-mon-api-wrapper",
+  "version": "2.0.0",
+  "description": "A wrapper for the Pokémon API (pokeapi.co)",
+  "main": "dist/PokemonAPI.js",
   "author": "gonzyui",
-  "license": "MIT",
-  "description": "A simple wrapper for the PokeAPI",
+  "repository": "https://github.com/gonzyui/Pokemon-api-wrapper",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/PokemonAPI.js",
+    "dev": "ts-node src/PokemonAPI.ts"
+  },
   "dependencies": {
-    "axios": "^1.7.9"
-  }
+    "axios": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT"
 }

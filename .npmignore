@@ -1,0 +1,14 @@
+# Dossiers
+/dist/               # Ne pas inclure les fichiers compilés
+/node_modules/       # Ne pas inclure les dépendances locales
+/src/                # Ne pas inclure les fichiers source si tu compiles
+/test/               # Ne pas inclure les fichiers de test (si tu n'as pas besoin de les publier)
+
+# Fichiers
+*.log                # Ne pas inclure les fichiers de log
+*.tsbuildinfo        # Fichiers de build info TypeScript
+tsconfig.json        # Ne pas publier la configuration TypeScript
+package-lock.json    # Utilisé pour le développement uniquement
+yarn.lock            # Utilisé pour le développement uniquement
+*.md                 # Documentation locale
+*.ts                 # Ne pas inclure les fichiers TypeScript (si déjà compilés dans dist)
